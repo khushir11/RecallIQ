@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in | RecallIQ</title>
+    <meta name="description" content="RecallIQ finds customers at risk of churning and sends personalised re-engagement emails through your Gmail." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="auth-page">
+      <section class="auth-hero">
+        <a class="brand" href="login.html"><span class="brand-mark">R</span><span>RecallIQ</span></a>
+        <div>
+          <p class="eyebrow" style="color: var(--aqua)">AI customer re-engagement</p>
+          <h1>Win back customers before they slip away.</h1>
+          <p>Score churn risk, group customers into actionable segments, and send personalised emails from your own Gmail — with every result tracked honestly.</p>
+          <ul>
+            <li>Churn-risk scoring with explanations</li>
+            <li>Segments built from your real customer data</li>
+            <li>Consent-checked Gmail campaigns with per-recipient results</li>
+          </ul>
+        </div>
+        <small style="color:#7fa79b">Your data stays in your RecallIQ account.</small>
+      </section>
+      <main class="auth-panel">
+        <div class="auth-card">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Log in to RecallIQ</h1>
+          <p class="muted">New here? <a href="register.html">Create an account</a></p>
+          <div id="formNotice" role="alert"></div>
+          <form id="loginForm" novalidate>
+            <label class="field">Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="field">Password
+              <input type="password" name="password" autocomplete="current-password" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Log in</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="auth-page.js"></script>
+  </body>
+</html>

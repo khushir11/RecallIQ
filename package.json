@@ -1,0 +1,8 @@
+{
+  "name": "recalliq",
+  "private": true,
+  "scripts": {
+    "start": "node frontend-server.js",
+    "test": "npm --prefix backend test"
+  }
+}

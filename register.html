@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create account | RecallIQ</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="auth-page">
+      <section class="auth-hero">
+        <a class="brand" href="login.html"><span class="brand-mark">R</span><span>RecallIQ</span></a>
+        <div>
+          <p class="eyebrow" style="color: var(--aqua)">Get started</p>
+          <h1>Set up your re-engagement desk in minutes.</h1>
+          <p>Import customers from a CSV, connect Gmail, and launch your first consent-checked campaign.</p>
+        </div>
+        <small style="color:#7fa79b">Passwords are hashed with scrypt and never stored in plain text.</small>
+      </section>
+      <main class="auth-panel">
+        <div class="auth-card">
+          <p class="eyebrow">Create account</p>
+          <h1>Join RecallIQ</h1>
+          <p class="muted">Already have an account? <a href="login.html">Log in</a></p>
+          <div id="formNotice" role="alert"></div>
+          <form id="registerForm" novalidate>
+            <label class="field">Your name
+              <input type="text" name="name" autocomplete="name" required maxlength="80" />
+            </label>
+            <label class="field">Business name <small>Shown in your emails as the sender name</small>
+              <input type="text" name="businessName" autocomplete="organization" maxlength="120" />
+            </label>
+            <label class="field">Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="field">Password <small>At least 8 characters, with a letter and a number</small>
+              <input type="password" name="password" autocomplete="new-password" required minlength="8" />
+            </label>
+            <button class="btn btn-primary" type="submit">Create account</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="auth-page.js"></script>
+  </body>
+</html>

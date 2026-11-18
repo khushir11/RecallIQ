@@ -1,0 +1,12 @@
+# Netlify: static frontend only. Set PRODUCTION_API_BASE in config.js to your backend URL and add the
+# Netlify origin to the backend's CORS_ORIGINS. Only the frontend files are published.
+[build]
+  command = "mkdir -p dist && cp index.html login.html register.html styles.css config.js api.js script.js auth-page.js favicon.svg dist/"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"

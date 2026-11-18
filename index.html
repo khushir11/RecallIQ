@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecallIQ | AI Customer Re-Engagement</title>
+    <meta name="description" content="RecallIQ detects at-risk customers, recommends re-engagement actions and sends personalised, consent-checked emails through Gmail." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard"><span class="brand-mark">R</span><span>RecallIQ</span></a>
+        <nav class="nav">
+          <a href="#dashboard" data-view="dashboard"><span class="icon" aria-hidden="true">◧</span>Dashboard</a>
+          <a href="#customers" data-view="customers"><span class="icon" aria-hidden="true">☰</span>Customers</a>
+          <a href="#segments" data-view="segments"><span class="icon" aria-hidden="true">✦</span>AI recommendations</a>
+          <a href="#campaigns" data-view="campaigns"><span class="icon" aria-hidden="true">✉</span>Campaigns</a>
+          <a href="#risk" data-view="risk"><span class="icon" aria-hidden="true">◑</span>Churn risk</a>
+          <a href="#settings" data-view="settings"><span class="icon" aria-hidden="true">⚙</span>Settings &amp; Gmail</a>
+        </nav>
+        <div class="sidebar-foot">
+          <span class="service-dot" id="dotBackend">Backend</span>
+          <span class="service-dot" id="dotGmail">Gmail</span>
+          <span class="service-dot" id="dotMl">ML service</span>
+          <div class="user-chip">
+            <strong id="userName">…</strong>
+            <span id="userEmail" class="small"></span>
+            <button class="btn btn-sm" id="logoutBtn" type="button">Log out</button>
+          </div>
+        </div>
+      </aside>
+
+      <div>
+        <header class="mobile-bar">
+          <a class="brand" href="#dashboard"><span class="brand-mark">R</span><span>RecallIQ</span></a>
+          <button class="icon-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">☰</button>
+        </header>
+        <main class="main" id="view" tabindex="-1" aria-live="polite">
+          <div class="loading"><span class="spinner"></span> Loading RecallIQ…</div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Generic modal shell; content is rendered by script.js -->
+    <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="icon-btn" type="button" data-close aria-label="Close">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </dialog>
+
+    <dialog class="modal" id="confirm" aria-labelledby="confirmTitle" style="width:min(480px,calc(100vw - 24px))">
+      <div class="modal-head"><h2 id="confirmTitle"></h2></div>
+      <div class="modal-body" id="confirmBody"></div>
+      <div class="modal-foot">
+        <button class="btn" type="button" id="confirmCancel">Cancel</button>
+        <button class="btn btn-dark" type="button" id="confirmOk">Confirm</button>
+      </div>
+    </dialog>
+
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
