@@ -161,3 +161,9 @@ All routes except `/api/health*`, `/api/auth/register`, `/api/auth/login` and `/
 | GET | `/api/gmail/status` | Gmail connection status |
 | POST | `/api/gmail/connect` · `verify` · `test` · `disconnect` | Gmail connection |
 | GET | `/api/gmail/callback` | Google OAuth redirect target |
+
+**🔗 Live demo:** https://recalliq-garo.onrender.com
+*(Hosted on Render's free plan — the first load after inactivity can take ~1 minute while it wakes up. Gmail sending is limited to approved test users.)*
+
+**Tech:** HTML/CSS/JavaScript · Node.js/Express · Python/FastAPI · scikit-learn · MongoDB Atlas · Gmail API (OAuth 2.0)
+
